@@ -54,13 +54,15 @@ def parse():
         words.append(line)
     words.sort(key=lambda i: int(i[0]))
     i = 1
-    write_info_file("2020考研英语恋练有词单词.txt", "unit" + str(i))
+    # write_info_file("2020考研英语恋练有词单词.txt", "unit" + str(i))
     for word in words:
         print(word)
-        write_info_file("2020考研英语恋练有词单词.txt", word[1])
+        write_info_file("units/unit" + str(i) + ".txt", word[1])
+        # write_info_file("2020考研英语恋练有词单词.txt", word[1])
         if word[1] == unit_end[i-1]:
             i += 1
-            write_info_file("2020考研英语恋练有词单词.txt", "unit" + str(i))
+
+            # write_info_file("2020考研英语恋练有词单词.txt", "unit" + str(i))
 
 
 if __name__ == '__main__':
